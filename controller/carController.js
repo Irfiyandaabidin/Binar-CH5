@@ -67,7 +67,7 @@ const findCars = async (req, res, next) => {
 
     const cars = await Car.findAll({
       where: condition,
-      paranoid: false,
+      paranoid: true,
       include: ["creator", "updater", "deleter"],
     });
 
